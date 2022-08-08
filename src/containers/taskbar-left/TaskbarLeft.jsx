@@ -16,10 +16,10 @@ import {
 import WinboxComponent from "../../components/winbox/WinboxComponent";
 function TaskbarLeft() {
   const [showStart, setShowStart] = useState(false);
+  const [showTerminal, setShowTerminal] = useState(false);
   function toggleShowStart() {
     setShowStart(!showStart);
   }
-  function redirectTo(link) {}
 
   return (
     <div className="taskbar taskbar-left">
@@ -74,6 +74,27 @@ function TaskbarLeft() {
                 </li>
               </ul>
             </div>
+            <WinboxComponent
+              options={{
+                title: "Terminal",
+                border: "4",
+                background: `linear-gradient(90deg, rgba(49,36,239,1)
+                    0%, rgba(67,0,168,1) 100%)`,
+                className: showTerminal ? "showTerminal" : "hidden",
+                x: "center",
+                y: "center",
+                width: "20%",
+                height: "50%",
+                top: 50,
+                right: 50,
+                bottom: 100,
+                left: 50,
+                modal: false,
+                url: "",
+                modern: false,
+                onClose: () => {},
+              }}
+            />
             <div className="start-col start-right">
               <ul>
                 <li id="start-right-title">
@@ -165,7 +186,7 @@ function TaskbarLeft() {
           </a>
         </div>
         <div className="column">
-          <a id="terminal">
+          <a id="terminal" onClick={() => setShowTerminal(true)}>
             <BsFillTerminalFill />
             {/* <i
               className="fas fa-terminal"
