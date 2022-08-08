@@ -1,0 +1,76 @@
+main {
+  flex: 1 1 auto;
+  padding: 18px;
+  top: 0;
+  bottom: 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+.hidden {
+  display: none !important;
+}
+.shown {
+  display: block !important;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.winbox ul {
+  padding-left: 16px;
+}
+
+.winbox ul li {
+  padding-bottom: 15px;
+}
+
+.winbox ul li ul li {
+  padding-bottom: 0px;
+}
+.desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.desktop-elements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.desktop-element {
+  padding-bottom: 24px;
+  flex: 50%;
+}
+.desktop__row {
+  display: flex;
+}
+.desktop-icon {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(2px 2px 2px white);
+}
+
+.desktop-icon-name {
+  display: block;
+  color: white;
+  text-shadow: 2px 2px black;
+}
