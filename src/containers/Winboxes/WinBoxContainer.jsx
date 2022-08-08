@@ -8,18 +8,21 @@ import {
 } from "../../redux/slices/itemsSlice";
 import WinboxComponent from "../../components/winbox/WinboxComponent";
 import Terminal from "../../components/terminal/Terminal";
+import About from "../../components/about/About";
 function WinBoxContainer() {
-  const { showTerminal } = useSelector((state) => state.items);
+  const {
+    showTerminal,
+    showAbout,
+    showMessages,
+    showMySkills,
+    showMyProjects,
+    showContactMe,
+  } = useSelector((state) => state.items);
   const dispatch = useDispatch();
   return (
     <>
-      {showTerminal && (
-        <Terminal
-          onClose={() => {
-            dispatch(toggleVisibility("showTerminal"));
-          }}
-        />
-      )}
+      {showTerminal && <Terminal />}
+      {showAbout && <About />}
     </>
   );
 }

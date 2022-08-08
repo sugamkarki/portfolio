@@ -1,22 +1,29 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import DesktopElement from "../../components/desktopElement/DesktopElement";
+import { toggleVisibility } from "../../redux/slices/itemsSlice";
 function Desktop() {
+  const dispatch = useDispatch();
   const DesktopElements = [
     {
       srcImg: "/images/desktop/about.png",
       spanTitle: "About Me",
+      trigger: "showAbout",
     },
     {
       srcImg: "/images/desktop/skills.png",
-      spanTitle: "About Me",
+      spanTitle: "My Skills",
+      trigger: "showMySkills",
     },
     {
       srcImg: "/images/desktop/projects.png",
-      spanTitle: "About Me",
+      spanTitle: "My Projects",
+      trigger: "showMyProjects",
     },
     {
       srcImg: "/images/desktop/contact.png",
-      spanTitle: "About Me",
+      spanTitle: "Contact Me",
+      trigger: "showContactMe",
     },
   ];
   return (
@@ -29,6 +36,7 @@ function Desktop() {
                 srcImg={element.srcImg}
                 spanTitle={element.spanTitle}
                 key={index}
+                toggle={() => dispatch(toggleVisibility(element.trigger))}
               />
             );
           })}

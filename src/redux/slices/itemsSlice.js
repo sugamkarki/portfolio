@@ -7,7 +7,7 @@ const initialState = {
   showMySkills: false,
   showMyProjects: false,
   showContactMe: false,
-  showAboutMe: false,
+  showAbout: false,
   showUpArrowElements: false,
   shownNumberOfTerminals: 0,
 };

@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-function DesktopElement({ srcImg, spanTitle }) {
+function DesktopElement({ srcImg, spanTitle, toggle }) {
   return (
-    <div className="desktop-element">
+    <div className="desktop-element" onClick={() => toggle()}>
       <motion.img
         className="desktop-icon"
         data-testid="close-icon"
