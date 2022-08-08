@@ -9,6 +9,9 @@ import {
 import WinboxComponent from "../../components/winbox/WinboxComponent";
 import Terminal from "../../components/terminal/Terminal";
 import About from "../../components/about/About";
+import Skills from "../../components/skills/Skills";
+import Projects from "../../components/projects/Projects";
+import Contact from "../../components/contact/Contact";
 function WinBoxContainer() {
   const {
     showTerminal,
@@ -23,6 +26,9 @@ function WinBoxContainer() {
     <>
       {showTerminal && <Terminal />}
       {showAbout && <About />}
+      {showMySkills && <Skills />}
+      {showMyProjects && <Projects />}
+      {showContactMe && <Contact />}
     </>
   );
 }
