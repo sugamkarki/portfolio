@@ -120,7 +120,7 @@
 
 .my-profile {
   display: inline-block;
-  content: url(/images/desktop/about.png);
+  content: url(../../images/desktop/about.png);
   width: 24px;
   border-radius: 50%;
 }
