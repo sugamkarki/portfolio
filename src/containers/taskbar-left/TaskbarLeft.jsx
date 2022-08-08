@@ -33,7 +33,6 @@ function TaskbarLeft() {
               showStart ? "startShown" : "hidden"
             }`}
           >
-            <WinboxComponent />
             <div className="start-col start-left">
               <ul>
                 <li id="start-left-title">START</li>
