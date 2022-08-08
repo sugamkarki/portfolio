@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   BsWindows,
   BsImageFill,
@@ -14,23 +15,32 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import WinboxComponent from "../../components/winbox/WinboxComponent";
+import {
+  changeVisibility,
+  increaseNumberOfTerminals,
+  decreaseNumberOfTerminals,
+  toggleVisibility,
+} from "../../redux/slices/itemsSlice";
 function TaskbarLeft() {
-  const [showStart, setShowStart] = useState(false);
-  const [showTerminal, setShowTerminal] = useState(false);
-  function toggleShowStart() {
-    setShowStart(!showStart);
-  }
-
+  const { showStartMenu, showTerminal, shownNumberOfTerminals } = useSelector(
+    (state) => state.items
+  );
+  const dispatch = useDispatch();
+  console.log(showTerminal);
+  console.log(shownNumberOfTerminals);
   return (
     <div className="taskbar taskbar-left">
       <div className="row">
         <div className="column start-menu-section">
-          <a id="start-menu-icon" onClick={() => toggleShowStart()}>
+          <a
+            id="start-menu-icon"
+            onClick={() => dispatch(toggleVisibility("showStartMenu"))}
+          >
             <BsWindows />
           </a>
           <div
             className={`start-menu-elements ${
-              showStart ? "startShown" : "hidden"
+              showStartMenu ? "startShown" : "hidden"
             }`}
           >
             <div className="start-col start-left">
@@ -74,27 +84,19 @@ function TaskbarLeft() {
                 </li>
               </ul>
             </div>
-            <WinboxComponent
-              options={{
-                title: "Terminal",
-                border: "4",
-                background: `linear-gradient(90deg, rgba(49,36,239,1)
-                    0%, rgba(67,0,168,1) 100%)`,
-                className: showTerminal ? "showTerminal" : "hidden",
-                x: "center",
-                y: "center",
-                width: "20%",
-                height: "50%",
-                top: 50,
-                right: 50,
-                bottom: 100,
-                left: 50,
-                modal: false,
-                url: "",
-                modern: false,
-                onClose: () => {},
-              }}
-            />
+            {showTerminal && shownNumberOfTerminals === 1 && (
+              <WinboxComponent
+                options={{
+                  title: "Terrarr",
+                  onClose: () => {
+                    dispatch(
+                      changeVisibility({ name: "showTerminal", value: false }),
+                      decreaseNumberOfTerminals()
+                    );
+                  },
+                }}
+              />
+            )}
             <div className="start-col start-right">
               <ul>
                 <li id="start-right-title">
@@ -186,7 +188,14 @@ function TaskbarLeft() {
           </a>
         </div>
         <div className="column">
-          <a id="terminal" onClick={() => setShowTerminal(true)}>
+          <a
+            id="terminal"
+            //   toggle visibility and increase number of terminals on click
+
+            onClick={() => {
+              dispatch(increaseNumberOfTerminals());
+            }}
+          >
             <BsFillTerminalFill />
             {/* <i
               className="fas fa-terminal"

@@ -50,5 +50,28 @@ function WinboxComponent({ styles, options }) {
     </WinboxReact>
   );
 }
-
-export default WinboxComponent;
+function WinboxWrapper({ options }) {
+  return (
+    <WinboxComponent
+      options={{
+        title: "Terminal",
+        border: "4",
+        background: `linear-gradient(90deg, rgba(49,36,239,1)
+                        0%, rgba(67,0,168,1) 100%)`,
+        x: "center",
+        y: "center",
+        width: "50%",
+        height: "50%",
+        top: 50,
+        right: 50,
+        bottom: 100,
+        left: 50,
+        modal: false,
+        url: "",
+        modern: true,
+        ...options,
+      }}
+    />
+  );
+}
+export default WinboxWrapper;
