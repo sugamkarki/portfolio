@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import Desktop from "./containers/desktop/Desktop";
 import TaskbarLeft from "./containers/taskbar-left/TaskbarLeft";
 import TaskbarRight from "./containers/taskbar-right/TaskbarRight";
