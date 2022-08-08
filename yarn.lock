@@ -7447,6 +7447,13 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-winbox@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/react-winbox/-/react-winbox-1.4.2.tgz#ce434fe01d4b79aae6e707073b1482ded1e695de"
+  integrity sha512-wNe3Ug6ZLiq1Mxk4CCUWtuR3xX2EPYqijtg83Dh/r6cP5zHFzTersmNPLNffOCRLMxlMsUvx0VNaID/7KbleBg==
+  dependencies:
+    winbox "^0.2.1"
+
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -8898,6 +8905,11 @@ winbox@^0.1.92:
   version "0.1.94"
   resolved "https://registry.yarnpkg.com/winbox/-/winbox-0.1.94.tgz#50602b27a83515760c4d866720a27c197cc2342c"
   integrity sha512-UkT1zMekV3jVNhGBzk5jFGiUeACJLbDwoocTw/k2e0YBsZNV/LutSw0VgwZiwVCUpj9VGFBIcrPQGiWYwsYz1Q==
+
+winbox@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/winbox/-/winbox-0.2.1.tgz#6ca7cd047fa52d9f3324884698ce8a9c9ba9bf27"
+  integrity sha512-K3PY+y+aWpkCpECGF2TqSi4w+OT+cuJHWbOKBjVerpexmdC6Is5m4y0gZ9rbxU2K+GszE1nH+d2okMAQTG05hg==
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"

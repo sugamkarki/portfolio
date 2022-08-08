@@ -7,19 +7,16 @@ import {
   toggleVisibility,
 } from "../../redux/slices/itemsSlice";
 import WinboxComponent from "../../components/winbox/WinboxComponent";
-
+import Terminal from "../../components/terminal/Terminal";
 function WinBoxContainer() {
   const { showTerminal } = useSelector((state) => state.items);
   const dispatch = useDispatch();
   return (
     <>
       {showTerminal && (
-        <WinboxComponent
-          options={{
-            title: "Terminal",
-            onClose: () => {
-              dispatch(toggleVisibility("showTerminal"));
-            },
+        <Terminal
+          onClose={() => {
+            dispatch(toggleVisibility("showTerminal"));
           }}
         />
       )}
