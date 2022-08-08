@@ -9,14 +9,14 @@ import {
 import WinboxComponent from "../../components/winbox/WinboxComponent";
 
 function WinBoxContainer() {
-  const { showStartMenu, showTerminal } = useSelector((state) => state.items);
+  const { showTerminal } = useSelector((state) => state.items);
   const dispatch = useDispatch();
   return (
     <>
       {showTerminal && (
         <WinboxComponent
           options={{
-            title: "Terrarr",
+            title: "Terminal",
             onClose: () => {
               dispatch(toggleVisibility("showTerminal"));
             },
