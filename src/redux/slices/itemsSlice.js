@@ -25,23 +25,19 @@ export const itemsSlice = createSlice({
       state[payload.name] = payload.value;
       console.log(state[payload.name]);
     },
-    decreaseNumberOfTerminals: (state, { payload }) => {
-      state.shownNumberOfTerminals = state.shownNumberOfTerminals - 1;
-    },
-    increaseNumberOfTerminals: (state, { payload }) => {
-      state.shownNumberOfTerminals = state.shownNumberOfTerminals + 1;
-      state.showTerminal = true;
-      console.log(state.shownNumberOfTerminals);
-    },
+    // decreaseNumberOfTerminals: (state, { payload }) => {
+    //   state.shownNumberOfTerminals = state.shownNumberOfTerminals - 1;
+    //   state.showTerminal = false;
+    // },
+    // increaseNumberOfTerminals: (state, { payload }) => {
+    //   state.shownNumberOfTerminals = state.shownNumberOfTerminals + 1;
+    //   state.showTerminal = true;
+    //   console.log(state.shownNumberOfTerminals);
+    // },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {
-  toggleVisibility,
-  changeVisibility,
-  decreaseNumberOfTerminals,
-  increaseNumberOfTerminals,
-} = itemsSlice.actions;
+export const { toggleVisibility, changeVisibility } = itemsSlice.actions;
 
 export default itemsSlice.reducer;
