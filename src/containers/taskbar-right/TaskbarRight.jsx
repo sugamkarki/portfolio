@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 import { FiChevronUp } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
 import { IoLogoTwitter } from "react-icons/io";
@@ -10,27 +12,35 @@ import {
   AiFillYoutube,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import { toggleVisibility } from "../../redux/slices/itemsSlice";
 function TaskbarRight() {
-  const [showItems, setShowItems] = useState({
-    links: false,
-    stats: false,
-  });
-  function toggleItems(item) {
-    setShowItems({
-      ...showItems,
-      [item]: !showItems[item],
-    });
-  }
+  const { showUpArrowElements, showMessages } = useSelector(
+    (state) => state.items
+  );
+  const dispatch = useDispatch();
+  //   const [showItems, setShowItems] = useState({
+  //     links: false,
+  //     stats: false,
+  //   });
+  //   function toggleItems(item) {
+  //     setShowItems({
+  //       ...showItems,
+  //       [item]: !showItems[item],
+  //     });
+  //   }
   return (
     <div className="taskbar taskbar-right">
       <div className="row">
         <div className={`column up-arrow-section`}>
-          <a id="up-arrow" onClick={() => toggleItems("links")}>
+          <a
+            id="up-arrow"
+            onClick={() => dispatch(toggleVisibility("showUpArrowElements"))}
+          >
             <FiChevronUp />
           </a>
           <div
             className={`up-arrow-elements  ${
-              showItems.links ? "showLinks" : "hidden"
+              showUpArrowElements ? "showLinks" : "hidden"
             }`}
           >
             <div>
@@ -97,14 +107,17 @@ function TaskbarRight() {
           </a>
         </div>
         <div className="column message-box-section">
-          <a id="message-icon" onClick={() => toggleItems("stats")}>
+          <a
+            id="message-icon"
+            onClick={() => dispatch(toggleVisibility("showMessages"))}
+          >
             {/* <i className="far fa-comment-alt fa-flip-horizontal"></i> */}
             <BiMessageAltDetail />
           </a>
           <div className="message-box-elements">
             <div
               className={`message-box-container
-         ${showItems.stats ? "showStats" : "hidden"}`}
+         ${showMessages ? "showStats" : "hidden"}`}
             >
               <div className="message-box-header">
                 <strong>Device Statistics</strong>
