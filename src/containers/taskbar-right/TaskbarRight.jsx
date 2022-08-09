@@ -12,22 +12,23 @@ import {
   AiFillYoutube,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import axios from "axios";
 import { toggleVisibility } from "../../redux/slices/itemsSlice";
+import { useEffect } from "react";
 function TaskbarRight() {
   const { showUpArrowElements, showMessages } = useSelector(
     (state) => state.items
   );
+  const [ip, setIP] = useState("");
+  async function getIP() {
+    const response = await axios.get("https://api.ipify.org/?format=json");
+    setIP(response.data.ip);
+  }
+  useEffect(() => {
+    getIP();
+  }, []);
   const dispatch = useDispatch();
-  //   const [showItems, setShowItems] = useState({
-  //     links: false,
-  //     stats: false,
-  //   });
-  //   function toggleItems(item) {
-  //     setShowItems({
-  //       ...showItems,
-  //       [item]: !showItems[item],
-  //     });
-  //   }
+
   return (
     <div className="taskbar taskbar-right">
       <div className="row">
@@ -103,28 +104,8 @@ function TaskbarRight() {
               <div className="message-box-body">
                 <div className="notifications">
                   <div className="notifications-header">Public IP</div>
-                  <div className="notifications-body" id="publicIP"></div>
-                </div>
-                <div className="notifications">
-                  <div className="notifications-header">Location</div>
-                  <div className="notifications-body" id="location">
-                    <strong>Show</strong>
-                  </div>
-                </div>
-                <div className="notifications">
-                  <div className="notifications-header">Clipboard</div>
-                  <div className="notifications-body" id="clipboard">
-                    <strong>Show</strong>
-                  </div>
-                </div>
-                <div className="notifications">
-                  <div className="notifications-header">Mouse Position</div>
-                  <div className="notifications-body" id="mousePosition"></div>
-                </div>
-                <div className="notifications">
-                  <div className="notifications-header">Screen Share</div>
-                  <div className="notifications-body" id="screenCapture">
-                    Capture
+                  <div className="notifications-body" id="publicIP">
+                    {ip}
                   </div>
                 </div>
               </div>
