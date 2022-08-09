@@ -10,7 +10,25 @@ function Contact() {
   }
   return (
     <WinboxComponent title="Contact Me" onCloseWindow={() => toggle}>
-      <div>Contact me</div>
+      <div className="contact">
+        <a
+          target="_blank"
+          href={"https://www.linkedin.com/in/sugam-karki-4877261a3/"}
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        <br />
+        <a
+          target="_blank"
+          href={"https://github.com/sugamkarki"}
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+        <br />
+        Or throw a stone at me or something
+      </div>
     </WinboxComponent>
   );
 }

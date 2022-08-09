@@ -45,12 +45,15 @@
 .about-me {
   padding-top: 1rem;
   padding-bottom: 2rem;
-  height:100%;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   flex: 1;
   font-family: var(--font-family);
+}
+.about-me ul li {
+  list-style-type: square;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -62,9 +65,124 @@ hr {
   font-family: var(--font-family);
   margin-top: 1rem;
 }
-li {
-  list-style-type: square;
-}
+
 .educational-intro {
   margin-top: 1rem;
+}
+.projects {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2C2C33', endColorstr='#072540', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+  color: #ddf8d6;
+}
+.projects,
+.projects .container {
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.projectCard {
+  margin: 1rem 0 0 0;
+  background-color: rgba(7, 37, 64, 1) 0%;
+}
+.projectCard a {
+  text-decoration: none;
+  color: #ddf8d6;
+}
+.contact {
+  width: 100%;
+  height: 100%;
+  color: #ddf8d6;
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2C2C33', endColorstr='#072540', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(7, 37, 64, 1) 0%,
+    rgba(44, 44, 51, 1) 100%
+  );
 }
