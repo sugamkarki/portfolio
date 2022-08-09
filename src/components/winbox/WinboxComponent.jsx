@@ -1,7 +1,13 @@
 import React from "react";
 import WinBox from "react-winbox";
 
-function WinboxComponent({ title, style, onCloseWindow, children }) {
+function WinboxComponent({
+  title,
+  className,
+  onCloseWindow,
+  children,
+  ...props
+}) {
   return (
     <WinBox
       width={"800"}
@@ -10,6 +16,10 @@ function WinboxComponent({ title, style, onCloseWindow, children }) {
       y={"center"}
       noClose={false}
       title={title}
+      className={className}
+      noShadow={false}
+      {...props}
+
     >
       {children}
     </WinBox>
