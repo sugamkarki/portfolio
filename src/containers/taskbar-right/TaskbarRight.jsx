@@ -44,45 +44,23 @@ function TaskbarRight() {
             }`}
           >
             <div>
-              <a>
-                {/* <i className="fab fa-facebook"></i> */}
-                <GrFacebookOption />
-              </a>
-            </div>
-            <div>
-              <a>
-                {/* <i className="fab fa-twitter"></i> */}
-                <IoLogoTwitter />
-              </a>
-            </div>
-            <div>
-              <a>
+              <a
+                target="_blank"
+                href={"https://www.linkedin.com/in/sugam-karki-4877261a3/"}
+                rel="noopener noreferrer"
+              >
                 {/* <i className="fab fa-linkedin"></i> */}
                 <AiFillLinkedin />
               </a>
             </div>
             <div>
-              <a>
+              <a
+                target="_blank"
+                href={"https:/www.github.com/sugamkarki"}
+                rel="noopener noreferrer"
+              >
                 {/* <i className="fab fa-github"></i> */}
                 <AiFillGithub />
-              </a>
-            </div>
-            <div>
-              <a>
-                {/* <i className="fab fa-youtube"></i> */}
-                <AiFillYoutube />
-              </a>
-            </div>
-            <div>
-              <a>
-                {/* <i className="fab fa-telegram"></i> */}
-                <FaTelegramPlane />
-              </a>
-            </div>
-            <div>
-              <a>
-                {/* <i className="fab fa-instagram"></i> */}
-                <AiOutlineInstagram />
               </a>
             </div>
           </div>
