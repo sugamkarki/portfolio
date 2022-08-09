@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DesktopElement from "../../components/desktopElement/DesktopElement";
-import { toggleVisibility } from "../../redux/slices/itemsSlice";
+import { toggleVisibility, clearAll } from "../../redux/slices/itemsSlice";
 function Desktop() {
   const dispatch = useDispatch();
   const DesktopElements = [
@@ -27,7 +27,7 @@ function Desktop() {
     },
   ];
   return (
-    <div className="desktop">
+    <div className="desktop" onClick={() => dispatch(clearAll())}>
       <div className="desktop-row">
         <div className="desktop-elements">
           {DesktopElements.map((element, index) => {

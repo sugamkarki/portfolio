@@ -25,6 +25,17 @@ export const itemsSlice = createSlice({
       state[payload.name] = payload.value;
       console.log(state[payload.name]);
     },
+    clearAll: (state) => {
+      state.showStartMenu = false;
+      state.showMessages = false;
+      state.showTerminal = false;
+      state.showMySkills = false;
+      state.showMyProjects = false;
+      state.showContactMe = false;
+      state.showAbout = false;
+      state.showUpArrowElements = false;
+      state.shownNumberOfTerminals = 0;
+    },
     // decreaseNumberOfTerminals: (state, { payload }) => {
     //   state.shownNumberOfTerminals = state.shownNumberOfTerminals - 1;
     //   state.showTerminal = false;
@@ -38,6 +49,7 @@ export const itemsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleVisibility, changeVisibility } = itemsSlice.actions;
+export const { toggleVisibility, changeVisibility, clearAll } =
+  itemsSlice.actions;
 
 export default itemsSlice.reducer;
