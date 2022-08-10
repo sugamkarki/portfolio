@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a8919754.css",
-    "main.js": "/portfolio/static/js/main.9a3363e3.js",
-    "static/js/27.f826509c.chunk.js": "/portfolio/static/js/27.f826509c.chunk.js",
-    "static/media/about.png": "/portfolio/static/media/about.f447ca8428ce3c514c99.png",
-    "index.html": "/portfolio/index.html"
+    "main.css": "/sugamkarki/portfolio/static/css/main.fc92cee6.css",
+    "main.js": "/sugamkarki/portfolio/static/js/main.04e13d2b.js",
+    "static/js/27.f826509c.chunk.js": "/sugamkarki/portfolio/static/js/27.f826509c.chunk.js",
+    "static/media/about.png": "/sugamkarki/portfolio/static/media/about.f447ca8428ce3c514c99.png",
+    "index.html": "/sugamkarki/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.a8919754.css",
-    "static/js/main.9a3363e3.js"
+    "static/css/main.fc92cee6.css",
+    "static/js/main.04e13d2b.js"
   ]
 }
