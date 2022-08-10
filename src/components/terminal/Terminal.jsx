@@ -26,7 +26,7 @@ function TerminalComponents() {
     <>
       <Terminal
         commands={commands}
-        backgroundColor="#845EC2"
+        backgroundColor="#2A272A"
         color="#FFC75F"
         style={{ fontWeight: "bold", fontSize: "1em" }}
         descriptions={{
